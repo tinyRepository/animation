@@ -2,14 +2,21 @@
   <div class="radar">
       <div class="target target-1"></div>
       <div class="target target-2"></div>
-      <div class="target target-3"></div>
+      <div class="target target-3 big-dot"></div>
       <div class="target target-4"></div>
-      <div class="target target-5"></div>
+      <div class="target target-5 big-dot"></div>
       <div class="target target-6"></div>
       <div class="target target-7"></div>
-      <div class="target target-8"></div>
+      <div class="target target-8 big-dot"></div>
       <div class="target target-9"></div>
-      <div class="target target-10"></div>
+      <div class="target target-10 big-dot"></div>
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-4"></div>
+      <div class="title">Analysing</div>
       <div class="arrow"></div>
   </div>
 </template>
@@ -19,14 +26,20 @@
 * { box-sizing: border-box; }
 
 body {
-  background: #000;
+    background: #fff;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 .radar {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 40px auto 0;
+    margin: auto;
     overflow: hidden;
     z-index: 500;
     border-radius: 10em 10em 10em 10em;
@@ -35,12 +48,10 @@ body {
 
 .arrow {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100px;
-    height: 100px;
-    border-right: 2px solid #7FCAFC;
-    background: linear-gradient(right bottom, rgba(118, 153, 15, 0.3) 0%, rgba(118, 153, 15, 0) 60%);
+    top: 10px;
+    left: 10px;
+    width: 90px;
+    height: 90px;
     transform-origin: right bottom;
     animation-delay: 0s;
     animation-timing-function: linear;
@@ -48,7 +59,9 @@ body {
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: arrower;
-    box-shadow: inset 0px 20px 20px 0px rgba(127, 202, 252, 0.9);
+    box-shadow: inset 0px 30px 20px 0px rgba(127, 202, 252, 0.4);
+    border-radius: 123px 0px 0 0;
+    border-right: 1px solid rgba(127, 202, 252, 0.6);
 }
 
 .target {
@@ -65,6 +78,11 @@ body {
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: targetper;
+}
+
+.big-dot {
+    width: 9px;
+    height: 9px;
 }
 
 .target-1 {
@@ -88,13 +106,13 @@ body {
 .target-4 {
     top: 40px;
     right: 50px;
-    animation-delay: 3.1s;
+    animation-delay: 0.8s;
 }
 
 .target-5 {
     top: 26px;
     right: 91px;
-    animation-delay: 3.1s;
+    animation-delay: 0.5s;
 }
 
 .target-6 {
@@ -112,13 +130,13 @@ body {
 .target-8 {
     top: 79px;
     right: 67px;
-    animation-delay: 3.1s;
+    animation-delay: 0.9s;
 }
 
 .target-9 {
     top: 125px;
     right: 74px;
-    animation-delay: 3.1s;
+    animation-delay: 2.1s;
 }
 
 .target-10 {
@@ -126,7 +144,6 @@ body {
     right: 124px;
     animation-delay: 1.1s;
 }
-
 
 @keyframes arrower {
   from { 
@@ -142,6 +159,93 @@ body {
   35%  { opacity: 0; }
   50%  { opacity: 1; }
   100% { opacity: 0; }
+}
+
+.circle-1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: solid 1px rgba(127, 202, 252, 0.2);
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 10px;
+}
+
+.circle-2 {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: solid 1px rgba(127, 202, 252, 0.3);
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 20px;
+}
+
+.circle-3 {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: solid 1px rgba(127, 202, 252, 0.4);
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 30px;
+}
+
+
+.circle-4 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: solid 1px rgba(127, 202, 252, 0.5);
+    position: absolute;
+    display: block;
+    top: 40px;
+    left: 40px;
+}
+
+.line-1 {
+    z-index: 2;
+    width: 1px;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    background: rgba(127, 202, 252, 0.9);
+    transform: translate(100px,0px);
+}
+
+.line-2 {
+    z-index: 2;
+    width: 1px;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    background: rgba(127, 202, 252, 0.9);
+    transform: translate(100px, 0px) rotate(90deg);
+}
+
+.title {
+    font-size: 14px;
+    font-family: Arial;
+    color: #666;
+    font-weight: 700;
+    z-index: 3;
+    position: absolute;
+    left: 68px;
+    top: 92px;
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.9;
+    }
+
+    to {
+        opacity: 0.4;
+    }
 }
 
 </style>
