@@ -16,9 +16,15 @@
       <div class="circle circle-2"></div>
       <div class="circle circle-3"></div>
       <div class="circle circle-4"></div>
-      <div class="title">Analysing</div>
+      <div class="title"></div>
       <div class="arrow"></div>
+
+        <audio src="Sonar Sounds.mp3" autoplay="autoplay">
+            Тег audio не поддерживается вашим браузером. Необходимо обновить браузер!
+        </audio> 
   </div>
+
+
 </template>
 
 
@@ -88,61 +94,61 @@ body {
 .target-1 {
     bottom: 40px;
     right: 87px;
-    animation-delay: 0.5s;
+    animation-delay: 4.4s;
 }
 
 .target-2 {
     bottom: 86px;
     left: 35px;
-    animation-delay: 1.5s;
+    animation-delay: 5.6s;
 }
 
 .target-3 {
     bottom: 67px;
     left: 62px;
-    animation-delay: 1.25s;
+    animation-delay: 5.2s;
 }
 
 .target-4 {
     top: 40px;
     right: 50px;
-    animation-delay: 0.8s;
+    animation-delay: 3.0s;
 }
 
 .target-5 {
     top: 26px;
     right: 91px;
-    animation-delay: 0.5s;
+    animation-delay: 2.8s;
 }
 
 .target-6 {
     top: 118px;
     right: 41px;
-    animation-delay: 3.4s;
+    animation-delay: 3.8s;
 }
 
 .target-7 {
     top: 57px;
     right: 137px;
-    animation-delay: 1.8s;
+    animation-delay: 6.2s;
 }
 
 .target-8 {
     top: 79px;
     right: 67px;
-    animation-delay: 0.9s;
+    animation-delay: 3.4s;
 }
 
 .target-9 {
     top: 125px;
     right: 74px;
-    animation-delay: 2.1s;
+    animation-delay: 4.1s;
 }
 
 .target-10 {
     top: 94px;
     right: 124px;
-    animation-delay: 1.1s;
+    animation-delay: 5.7s;
 }
 
 @keyframes arrower {
@@ -236,6 +242,12 @@ body {
     left: 68px;
     top: 92px;
     animation: pulse 2s linear infinite;
+
+    &:after {
+        position: relative;
+        content: 'Analysing';
+        animation: title  alternate 4s linear infinite;
+    }
 }
 
 @keyframes pulse {
@@ -243,8 +255,34 @@ body {
         opacity: 0.9;
     }
 
-    to {
-        opacity: 0.4;
+    33% {
+        opacity: 0.7;
+    }
+
+    66% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes title {
+    0% {
+        content: 'Analysing';
+    }
+
+    33% {
+        content: 'Analysing.';
+    }
+
+    66% {
+        content: 'Analysing..';
+    }
+
+    100% {
+        content: 'Analysing...';
     }
 }
 
