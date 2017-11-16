@@ -100,7 +100,7 @@ body {
 .target-2 {
     bottom: 86px;
     left: 35px;
-    animation-delay: 5.6s;
+    animation-delay: 5.4s;
 }
 
 .target-3 {
@@ -112,13 +112,13 @@ body {
 .target-4 {
     top: 40px;
     right: 50px;
-    animation-delay: 3.0s;
+    animation-delay: 2.9s;
 }
 
 .target-5 {
     top: 26px;
     right: 91px;
-    animation-delay: 2.8s;
+    animation-delay: 2.6s;
 }
 
 .target-6 {
@@ -130,13 +130,13 @@ body {
 .target-7 {
     top: 57px;
     right: 137px;
-    animation-delay: 6.2s;
+    animation-delay: 6.1s;
 }
 
 .target-8 {
     top: 79px;
     right: 67px;
-    animation-delay: 3.4s;
+    animation-delay: 3.3s;
 }
 
 .target-9 {
@@ -148,7 +148,7 @@ body {
 .target-10 {
     top: 94px;
     right: 124px;
-    animation-delay: 5.7s;
+    animation-delay: 5.4s;
 }
 
 @keyframes arrower {
