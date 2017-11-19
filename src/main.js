@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Radar from './radar.vue'
-import Counter from './counter.vue'
+// import CounterPlus from './counter-plus.vue'
+import CounterMinus from './counter-minus.vue'
 
 new Vue({
   el: '#radar',
@@ -8,6 +9,11 @@ new Vue({
 })
 
 new Vue({
-  el: '#counter',
-  render: h => h(Counter)
+  el: '#counter-plus',
+  render: h => h(CounterPlus)
+})
+
+new Vue({
+  el: '#counter-minus',
+  render: h => h(CounterMinus)
 })
