@@ -16,7 +16,7 @@
 
 
 <style lang="scss">
-    $time: 6s;
+    $time: 6;
     $circle-size: 60px;
     $circle-color: #58BAFC;
 
@@ -62,7 +62,7 @@
                 font-size: 16px;
                 color: #fff;
                 z-index: 10;
-                animation: number $time;
+                animation: number $time+s;
             }
         }
 
@@ -96,7 +96,7 @@
                 width: $circle-size;
                 height: $circle-size;
                 border-radius: 50%;
-                animation: fill $time;
+                animation: fill $time+s;
                 left: 0;
                 top: 0;
             }
