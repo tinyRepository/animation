@@ -1,7 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Radar from './radar.vue'
+import Counter from './counter.vue'
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+  el: '#radar',
+  render: h => h(Radar)
+})
+
+new Vue({
+  el: '#counter',
+  render: h => h(Counter)
 })
