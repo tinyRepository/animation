@@ -115,7 +115,7 @@
     // Animation styles
         @keyframes number {
             0% {
-                content: '6';
+                content: '$first-count';
             }
             15% {
                 content: '6';
