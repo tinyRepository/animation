@@ -15,7 +15,7 @@
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
     $time: 6;
     $circle-size: 60px;
     $circle-color: #58BAFC;
