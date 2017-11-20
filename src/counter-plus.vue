@@ -15,7 +15,7 @@
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
     $time: 6;
     $circle-size: 60px;
     $circle-color: #58BAFC;
@@ -115,7 +115,7 @@
     // Animation styles
         @keyframes number {
             0% {
-                content: '$first-count';
+                content: '6';
             }
             15% {
                 content: '6';
