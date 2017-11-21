@@ -1,14 +1,23 @@
 <template>
-    <div class="counter-wrap">
 
-        <div class="coin">
-            <img src="./assets/coin.svg" class="coin__svg">
+    <div class="counter-container">
+        <div class="counter-wrap">
+
+            <div class="coin">
+                <img src="./assets/coin.svg" class="coin__svg">
+            </div>
+
+            <div class="counter">
+                <div class="counter__number"></div>
+                <div class="counter__border"></div>
+                <img src="./assets/counter.svg" class="counter__svg">
+            </div>
+
         </div>
 
-        <div class="counter">
-            <div class="counter__number"></div>
-            <div class="counter__border"></div>
-            <img src="./assets/counter.svg" class="counter__svg">
+        <div class="counter__text">
+            <div class="counter__title element-animation">Selling Ripple to Bittrex</div>
+            <div class="counter__course">Expected Profit: 1,5025600 BTC</div>
         </div>
 
     </div>
@@ -16,29 +25,29 @@
 
 
 <style lang="scss" scoped>
-    $time: 6;
+    $time: 3;
     $circle-size: 60px;
     $circle-color: #58BAFC;
 
     // Markup elements
-    .counter-wrap {
+    .counter-container {
         max-width: 500px;
         margin: auto;
         border: 1px solid;
         padding: 100px 50px;
         position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        flex-direction: column;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .counter-wrap {
+        max-width: 500px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 
@@ -47,6 +56,7 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        animation: zoomOut 0.6s 3s forwards;
 
         &__number {
             position: absolute;
@@ -57,7 +67,7 @@
 
             &::after {
                 position: absolute;
-                content: '6';
+                content: '0';
                 font-family: Helvetica, Arial, sans-serif;
                 font-size: 16px;
                 color: #fff;
@@ -101,12 +111,41 @@
                 top: 0;
             }
         }
+
+        &__text {
+            margin-top: 25px;
+            overflow: hidden;
+        }
+
+        &__title {
+            color: rgb(11, 59, 91);
+            font-family: Arial;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 5px;
+            animation: animationFrames linear 4s;
+            animation-iteration-count: 1;
+            transform-origin: 50% 50%;
+            transform: translate3d(100%, 0, 0);
+            animation-fill-mode: forwards;
+        }
+
+        &__course {
+            color: rgb(113, 126, 158);
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            word-wrap: break-word;
+            font-weight: 500;
+            transform: translate3d(0, 0%, 0);
+            animation: slideUp 0.3s 3.3s forwards;
+        }
     }
 
     .coin {
         &__svg {
-            animation: coin 1s;
-            animation-iteration-count: $time;
+            animation: coin 1s $time, fadeOut 1s 3s 1 forwards;
             animation-timing-function: cubic-bezier(0.6, 0.1, 0.59, 0.93);
             transform: translate3d(100%,0,0);
         }
@@ -115,81 +154,74 @@
     // Animation styles
         @keyframes number {
             0% {
-                content: '0';
-            }
-            15% {
-                content: '0';
-            }
-            16% {
-                content: '1';
-            }
-            31% {
-                content: '1';
+                content: '3';
             }
             32% {
-                content: '2';
-            }
-            47% {
-                content: '2';
-            }
-            48% {
                 content: '3';
             }
-            63% {
-                content: '3';
+            33% {
+                content: '2';
             }
-            64% {
-                content: '4';
+            65% {
+                content: '2';
             }
-            79% {
-                content: '4';
+            66% {
+                content: '1';
             }
-            80% {
-                content: '5';
+            98% {
+                content: '1';
             }
-            95% {
-                content: '5';
-            }
-            96% {
-                content: '6';
+            99% {
+                content: '0';
             }
             100% {
-                content: '6';
+                content: '0';
             }
         }
 
-        @keyframes fill {
-            0% {left: 0%;}
-            // 1ый проход
-            14% {left: 0%;}
-            16% {left: 16%;}
-            18% {left: 10%;}
-            20% {left: 14%;}
-            // 2ой проход
-            30% {left: 14%;}
-            32% {left: 30%;}
-            34% {left: 24%;}
-            36% {left: 28%;}
-            // 3ий проход
-            46% {left: 28%;}
-            48% {left: 44%;}
-            50% {left: 38%;}
-            52% {left: 42%;}
-            // 4ый проход
-            62% {left: 42%;}
-            64% {left: 58%;}
-            66% {left: 52%;}
-            68% {left: 56%;}
-            // 5ый проход
-            78% {left: 56%;}
-            80% {left: 72%;}
-            82% {left: 66%;}
-            84% {left: 70%;}
-            // 6ой проход
-            94% {left: 70%;}
-            96% {left: 86%;}
-            98% {left: 80%;}
-            100% {left: 84%;}
+         @keyframes fill {
+            0% {
+                left: 0%;
+            }
+            32% {
+                left: 0%;
+            }
+            34% {
+                left: 33%;
+            }
+            36% {
+                left: 24%;
+            }
+            38% {
+                left: 30%;
+            }
+            64% {
+                left: 30%;
+            }
+            66% {
+                left: 63%;
+            }
+            68% {
+                left: 54%;
+            }
+            70% {
+                left: 60%;
+            }
+            93% {
+                left: 60%;
+            }
+            95% {
+                left: 93%;
+            }
+            97% {
+                left: 84%;
+            }
+            99% {
+                left: 90%;
+            }
+            100% {
+                left: 100%;
+            }
         }
 
         @keyframes coin {
@@ -202,6 +234,50 @@
             }
         }
 
+        @keyframes slideUp {
+            0%{
+                transform: translate3d(0, 0%, 0);
+            }
 
+            100% {
+                transform: translate3d(0, 100%, 0);
+            }
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes animationFrames {
+            0% {
+                transform:  translate(0%,0px);
+            }
+            85% {
+                transform:  translate(0%,0px);
+                opacity: 1;
+            }
+            90% {
+                transform:  translate(100%,0px);
+                opacity: 0;
+            }
+            100% {
+                transform:  translate(100%,0px);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
 
 </style>
