@@ -16,7 +16,7 @@
         </div>
         
         <div class="counter__text">
-            <div class="counter__title element-animation">Selling Ripple to Bittrex</div>
+            <div class="counter__title element-animation">Buying Ripple at Coinone</div>
             <div class="counter__course">Expected Profit: 1,5025600 BTC</div>
         </div>
 
