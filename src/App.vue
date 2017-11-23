@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      currentAnimation: 3
+      currentAnimation: 4
     };
   }
 }
