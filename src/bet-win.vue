@@ -1,16 +1,18 @@
 <template>
     <div class="bet-container">
-        <div class="coin">
-            <img src="./assets/coin-tail.svg" class="coin-tail">
-            <img src="./assets/coin-body.svg" class="coin-body">
-        </div>
+        <div class="hidden-container">
+            <div class="coin">
+                <img src="./assets/coin-tail.svg" class="coin-tail">
+                <img src="./assets/coin-body.svg" class="coin-body">
+            </div>
 
-        <div class="bet-difference">
-            + 0,5025600 BTC
-        </div>
+            <div class="bet-difference">
+                + 0,5025600 BTC
+            </div>
 
-        <div class="bet-info">
-            Congratulations!
+            <div class="bet-info">
+                Congratulations!
+            </div>
         </div>
     </div>
 </template>
@@ -26,7 +28,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        animation: hideEnd 0.6s 7s 1 forwards;
 
         .coin {
             position: relative;
@@ -47,6 +48,16 @@
                 z-index: 1;
             }
         }
+    }
+
+    .hidden-container {
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: hideEnd 0.6s 7s 1 forwards;
     }
 
     .bet-difference {
