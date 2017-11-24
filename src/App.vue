@@ -4,7 +4,7 @@
     <nav>
       <a href="#" @click="currentAnimation = 0">Радар</a>
       <a href="#" @click="currentAnimation = 1">Счетчик увеличивается</a>
-      <a href="#" @click="currentAnimation = 2">Счетчик уменьшается</a><br>
+      <a href="#" @click="currentAnimation = 2">Счетчик уменьшается</a>
       <a href="#" @click="currentAnimation = 3">Ставка выиграла</a>
       <a href="#" @click="currentAnimation = 4">Ставка проиграла</a>
     </nav>
