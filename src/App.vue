@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <h1>Анимации</h1>
-    <nav>
-      <a href="#" @click="currentAnimation = 0">Радар</a>
-      <a href="#" @click="currentAnimation = 1">Счетчик увеличивается</a>
-      <a href="#" @click="currentAnimation = 2">Счетчик уменьшается</a>
-      <a href="#" @click="currentAnimation = 3">Ставка выиграла</a>
-      <a href="#" @click="currentAnimation = 4">Ставка проиграла</a>
-    </nav>
-    <Radar v-if="currentAnimation === 0"></Radar>
-    <CounterPlus v-if="currentAnimation === 1"></CounterPlus>
-    <CounterMinus v-if="currentAnimation === 2"></CounterMinus>
-    <BetWin v-if="currentAnimation === 3"></BetWin>
-    <BetLose v-if="currentAnimation === 4"></BetLose>
-  </div>
+    <div>
+        <h1>Анимации</h1>
+        <nav>
+          <a href="#" @click="currentAnimation = 0">Радар</a>
+          <a href="#" @click="currentAnimation = 1">Счетчик увеличивается</a>
+          <a href="#" @click="currentAnimation = 2">Счетчик уменьшается</a>
+          <a href="#" @click="currentAnimation = 3">Ставка выиграла</a>
+          <a href="#" @click="currentAnimation = 4">Ставка проиграла</a>
+        </nav>
+        <Radar v-if="currentAnimation === 0"></Radar>
+        <CounterPlus v-if="currentAnimation === 1"></CounterPlus>
+        <CounterMinus v-if="currentAnimation === 2"></CounterMinus>
+        <BetWin v-if="currentAnimation === 3"></BetWin>
+        <BetLose v-if="currentAnimation === 4"></BetLose>
+    </div>
 </template>
 
 <script>
@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      currentAnimation: 4
+      currentAnimation: 0
     };
   }
 }

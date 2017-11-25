@@ -153,181 +153,137 @@
         }
     }
 
-    // Animation styles
-    @keyframes number {
-        0% {
-            content: '6';
-        }
-        32% {
-            content: '6';
-        }
-        33% {
-            content: '5';
-        }
-        65% {
-            content: '5';
-        }
-        66% {
-            content: '4';
-        }
-        98% {
-            content: '4';
-        }
-        99% {
-            content: '3';
-        }
-        100% {
-            content: '3';
-        }
+// Animation styles
+@keyframes number {
+    0%   {content: '6';}
+    32%  {content: '6';}
+    33%  {content: '5';}
+    65%  {content: '5';}
+    66%  {content: '4';}
+    98%  {content: '4';}
+    99%  {content: '3';}
+    100% {content: '3';}
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translate3d(-50%, 0, 0);
     }
 
-    @keyframes slideLeft {
-        0% {
-            transform: translate3d(-50%, 0, 0);
-        }
-
-        100% {
-            transform: translate3d(0%, 0, 0);
-        }
+    100% {
+        transform: translate3d(0%, 0, 0);
     }
+}
 
-        @keyframes zoomIn {
-            0% {
-                transform: scale(0.0);
-            }
-
-            80% {
-                transform: scale(1.3);
-            }
-            
-            85% {
-                transform: scale(0.9);
-            }
-
-            90% {
-                transform: scale(1.1);
-            }
-
-            95% {
-                transform: scale(0.95);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-    @keyframes slideRight {
+    @keyframes zoomIn {
         0% {
-            transform: translate3d(0%, 0, 0);
+            transform: scale(0.0);
         }
 
-        100% {
-            transform: translate3d(50%, 0, 0);
+        80% {
+            transform: scale(1.3);
         }
-    }
-
-    @keyframes slideUp {
-        0%{
-            transform: translate3d(0, 100%, 0);
+        
+        85% {
+            transform: scale(0.9);
         }
 
-        100% {
-            transform: translate3d(0, 0%, 0);
-        }
-    }
-    
-    @keyframes changeSize {
-        0% {
-            width: 100px;
-            height: 0px;
+        90% {
+            transform: scale(1.1);
         }
 
-        100% {
-            width: 60px;
-            height: 60px;
-        }
-    }
-
-    @keyframes fill {
-        0% {
-            left: -100%;
-        }
-        32% {
-            left: -100%;
-        }
-        34% {
-            left: -66%;
-        }
-        36% {
-            left: -76%;
-        }
-        38% {
-            left: -70%;
-        }
-        64% {
-            left: -70%;
-        }
-        66% {
-            left: -33%;
-        }
-        68% {
-            left: -43%;
-        }
-        70% {
-            left: -37%;
-        }
-        93% {
-            left: -37%;
-        }
         95% {
-            left: -0%;
-        }
-        97% {
-            left: -6%;
-        }
-        99% {
-            left: -2%;
-        }
-        100% {
-            left: 0%;
-        }
-    }
-
-    @keyframes border {
-        0% {
-            width: 0;
-            height: 0;
+            transform: scale(0.95);
         }
 
         100% {
-            width: 60px;
-            height: 60px;
+            transform: scale(1);
         }
     }
 
-
-    @keyframes coin {
-        from {
-            transform: translate3d(-200%,0,0);
-        }
-
-        to {
-            transform: translate3d(100%,0,0);
-        }
+@keyframes slideRight {
+    0% {
+        transform: translate3d(0%, 0, 0);
     }
 
-    @keyframes animationFrames {
-        0% {
-            transform:  translate(-100%,0px);
-            opacity: 0;
-        }
-        10% {
-            transform:  translate(0%,0px);
-            opacity: 1;
-        }
-        100% {
-            transform:  translate(0%,0px);
-        }
+    100% {
+        transform: translate3d(50%, 0, 0);
     }
+}
+
+@keyframes slideUp {
+    0%{
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0%, 0);
+    }
+}
+
+@keyframes changeSize {
+    0% {
+        width: 100px;
+        height: 0px;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes fill {
+    0%   {left: -100%;}
+    32%  {left: -100%;}
+    34%  {left: -66%;}
+    36%  {left: -76%;}
+    38%  {left: -70%;}
+    64%  {left: -70%;}
+    66%  {left: -33%;}
+    68%  {left: -43%;}
+    70%  {left: -37%;}
+    93%  {left: -37%;}
+    95%  {left: -0%;}
+    97%  {left: -6%;}
+    99%  {left: -2%;}
+    100% {left: 0%;}
+}
+
+@keyframes border {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+@keyframes coin {
+    from {
+        transform: translate3d(-200%,0,0);
+    }
+
+    to {
+        transform: translate3d(100%,0,0);
+    }
+}
+
+@keyframes animationFrames {
+    0% {
+        transform:  translate(-100%,0px);
+        opacity: 0;
+    }
+    10% {
+        transform:  translate(0%,0px);
+        opacity: 1;
+    }
+    100% {
+        transform:  translate(0%,0px);
+    }
+}
 </style>

@@ -151,133 +151,90 @@
         }
     }
 
-    // Animation styles
-        @keyframes number {
-            0% {
-                content: '3';
-            }
-            32% {
-                content: '3';
-            }
-            33% {
-                content: '2';
-            }
-            65% {
-                content: '2';
-            }
-            66% {
-                content: '1';
-            }
-            98% {
-                content: '1';
-            }
-            99% {
-                content: '0';
-            }
-            100% {
-                content: '0';
-            }
-        }
+// Animation styles
+@keyframes number {
+    0%   {content: '3';}
+    32%  {content: '3';}
+    33%  {content: '2';}
+    65%  {content: '2';}
+    66%  {content: '1';}
+    98%  {content: '1';}
+    99%  {content: '0';}
+    100% {content: '0';}
+}
 
-         @keyframes fill {
-            0% {
-                left: 0%;
-            }
-            32% {
-                left: 0%;
-            }
-            34% {
-                left: 33%;
-            }
-            36% {
-                left: 24%;
-            }
-            38% {
-                left: 30%;
-            }
-            64% {
-                left: 30%;
-            }
-            66% {
-                left: 63%;
-            }
-            68% {
-                left: 54%;
-            }
-            70% {
-                left: 60%;
-            }
-            93% {
-                left: 60%;
-            }
-            95% {
-                left: 93%;
-            }
-            97% {
-                left: 84%;
-            }
-            99% {
-                left: 90%;
-            }
-            100% {
-                left: 100%;
-            }
-        }
+    @keyframes fill {
+    0%   {left: 0%;}
+    32%  {left: 0%;}
+    34%  {left: 33%;}
+    36%  {left: 24%;}
+    38%  {left: 30%;}
+    64%  {left: 30%;}
+    66%  {left: 63%;}
+    68%  {left: 54%;}
+    70%  {left: 60%;}
+    93%  {left: 60%;}
+    95%  {left: 93%;}
+    97%  {left: 84%;}
+    99%  {left: 90%;}
+    100% {left: 100%;}
+}
 
-        @keyframes coin {
-            from {
-                transform: translate3d(100%,0,0);
-            }
+@keyframes coin {
+    from {
+        transform: translate3d(100%,0,0);
+    }
 
-            to {
-                transform: translate3d(400%,0,0);
-            }
-        }
+    to {
+        transform: translate3d(400%,0,0);
+    }
+}
 
-        @keyframes slideUp {
-            0%{
-                transform: translate3d(0, 0%, 0);
-            }
+@keyframes slideUp {
+    0%{
+        transform: translate3d(0, 0%, 0);
+    }
 
-            100% {
-                transform: translate3d(0, 100%, 0);
-            }
-        }
+    100% {
+        transform: translate3d(0, 100%, 0);
+    }
+}
 
-        @keyframes zoomOut {
-            0% {
-                transform: scale(1);
-            }
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+    }
 
-            100% {
-                transform: scale(0);
-            }
-        }
+    100% {
+        transform: scale(0);
+    }
+}
 
-        @keyframes animationFrames {
-            0% {
-                transform:  translate(0%,0px);
-            }
-            85% {
-                transform:  translate(0%,0px);
-                opacity: 1;
-            }
-            90% {
-                transform:  translate(100%,0px);
-                opacity: 0;
-            }
-            100% {
-                transform:  translate(100%,0px);
-            }
-        }
+@keyframes animationFrames {
+    0% {
+        transform:  translate(0%,0px);
+    }
+    85% {
+        transform:  translate(0%,0px);
+        opacity: 1;
+    }
+    90% {
+        transform:  translate(100%,0px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform:  translate(100%,0px);
+    }
+}
 
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 </style>
