@@ -43,7 +43,7 @@ body {
     z-index: 500;
     border-radius: 10em 10em 10em 10em;
     background: #fff;
-    // animation: hideEnd 1s 4.5s forwards;
+    // animation: hideEnd 1s 12s forwards;
 }
 
 .arrow {
@@ -53,8 +53,8 @@ body {
     border-right: 1px solid #6DC0F7;
     transform-origin: right bottom;
     animation-delay: 0s;
-    animation-timing-function: ease-out;
-    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-duration: 4s;
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: arrower;
@@ -71,7 +71,7 @@ body {
     transform-origin: 50% 50%;
     opacity: 0;
     animation-timing-function: ease-in;
-    animation-duration: 1.7s;
+    animation-duration: 4s;
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: targetper;
@@ -87,25 +87,25 @@ body {
     &-1 {
         bottom: 40px;
         right: 87px;
-        animation-delay: 0.5s;
+        animation-delay: 1.6s;
     }
 
     &-2 {
         bottom: 86px;
         left: 35px;
-        animation-delay: 0.8s;
+        animation-delay: 2.6s;
     }
 
     &-3 {
         bottom: 67px;
         left: 62px;
-        animation-delay: 0.7s;
+        animation-delay: 2.3s;
     }
 
     &-4 {
         top: 40px;
         right: 50px;
-        // animation-delay: 0.4s;
+        animation-delay: 0.2s;
     }
 
     &-5 {
@@ -117,30 +117,31 @@ body {
     &-6 {
         top: 118px;
         right: 41px;
-        animation-delay: 0.35s;
+        animation-delay: 1s;
     }
 
     &-7 {
         top: 57px;
         right: 137px;
-        animation-delay: 0.9s;
+        animation-delay: 3.2s;
     }
 
     &-8 {
         top: 79px;
         right: 67px;
-        animation-delay: 0.2s;
+        animation-delay: 0.5s;
     }
 
     &-9 {
         top: 125px;
         right: 74px;
-        animation-delay: 0.6s;
+        animation-delay: 1.3s;
     }
 
     &-10 {
         top: 94px;
         right: 124px;
+        animation-delay: 2.8s;
     }
 }
 
