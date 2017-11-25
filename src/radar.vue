@@ -1,28 +1,25 @@
 <template>
   <div class="radar">
-      <div class="target target-1"></div>
-      <div class="target target-2"></div>
-      <div class="target target-3 big-dot"></div>
-      <div class="target target-4"></div>
-      <div class="target target-5 big-dot"></div>
-      <div class="target target-6"></div>
-      <div class="target target-7"></div>
-      <div class="target target-8 big-dot"></div>
-      <div class="target target-9"></div>
-      <div class="target target-10 big-dot"></div>
-      <div class="line line-1"></div>
-      <div class="line line-2"></div>
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-      <div class="circle circle-4"></div>
-      <div class="title"></div>
-      <div class="arrow"></div>
+    <div class="target target-1"></div>
+    <div class="target target-2"></div>
+    <div class="target target-3 big-dot"></div>
+    <div class="target target-4"></div>
+    <div class="target target-5 big-dot"></div>
+    <div class="target target-6"></div>
+    <div class="target target-7"></div>
+    <div class="target target-8 big-dot"></div>
+    <div class="target target-9"></div>
+    <div class="target target-10 big-dot"></div>
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+    <div class="circle circle-4"></div>
+    <div class="title"></div>
+    <img src="./assets/arrow.svg" class="arrow">
   </div>
-
-
 </template>
-
 
 <style lang="scss">
 * { box-sizing: border-box; }
@@ -46,24 +43,22 @@ body {
     z-index: 500;
     border-radius: 10em 10em 10em 10em;
     background: #fff;
+    // animation: hideEnd 1s 4.5s forwards;
 }
 
 .arrow {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 90px;
-    height: 90px;
+    border-right: 1px solid #6DC0F7;
     transform-origin: right bottom;
     animation-delay: 0s;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-duration: 1.7s;
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: arrower;
-    box-shadow: inset 0px 30px 20px 0px rgba(127, 202, 252, 0.4);
-    border-radius: 123px 0px 0 0;
-    border-right: 1px solid rgba(127, 202, 252, 0.6);
+    opacity: 0.6;
 }
 
 .target {
@@ -75,8 +70,8 @@ body {
     box-shadow: 0 0 5px white;
     transform-origin: 50% 50%;
     opacity: 0;
-    animation-timing-function: ease;
-    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-duration: 1.7s;
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: targetper;
@@ -87,145 +82,158 @@ body {
     height: 9px;
 }
 
-.target-1 {
-    bottom: 40px;
-    right: 87px;
-    animation-delay: 4.4s;
-}
+.target {
 
-.target-2 {
-    bottom: 86px;
-    left: 35px;
-    animation-delay: 5.4s;
-}
+    &-1 {
+        bottom: 40px;
+        right: 87px;
+        animation-delay: 0.5s;
+    }
 
-.target-3 {
-    bottom: 67px;
-    left: 62px;
-    animation-delay: 5.2s;
-}
+    &-2 {
+        bottom: 86px;
+        left: 35px;
+        animation-delay: 0.8s;
+    }
 
-.target-4 {
-    top: 40px;
-    right: 50px;
-    animation-delay: 2.9s;
-}
+    &-3 {
+        bottom: 67px;
+        left: 62px;
+        animation-delay: 0.7s;
+    }
 
-.target-5 {
-    top: 26px;
-    right: 91px;
-    animation-delay: 2.6s;
-}
+    &-4 {
+        top: 40px;
+        right: 50px;
+        // animation-delay: 0.4s;
+    }
 
-.target-6 {
-    top: 118px;
-    right: 41px;
-    animation-delay: 3.8s;
-}
+    &-5 {
+        top: 26px;
+        right: 91px;
+        animation-name: firsttarget;
+    }
 
-.target-7 {
-    top: 57px;
-    right: 137px;
-    animation-delay: 6.1s;
-}
+    &-6 {
+        top: 118px;
+        right: 41px;
+        animation-delay: 0.35s;
+    }
 
-.target-8 {
-    top: 79px;
-    right: 67px;
-    animation-delay: 3.3s;
-}
+    &-7 {
+        top: 57px;
+        right: 137px;
+        animation-delay: 0.9s;
+    }
 
-.target-9 {
-    top: 125px;
-    right: 74px;
-    animation-delay: 4.1s;
-}
+    &-8 {
+        top: 79px;
+        right: 67px;
+        animation-delay: 0.2s;
+    }
 
-.target-10 {
-    top: 94px;
-    right: 124px;
-    animation-delay: 5.4s;
+    &-9 {
+        top: 125px;
+        right: 74px;
+        animation-delay: 0.6s;
+    }
+
+    &-10 {
+        top: 94px;
+        right: 124px;
+    }
 }
 
 @keyframes arrower {
-  from { 
-    transform: rotate(0deg); 
-  }
-  to   { 
-    transform: rotate(360deg); 
-  }
+    from { 
+        transform: rotate(0deg); 
+    }
+    to   { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes firsttarget {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 @keyframes targetper {
-  0%   { opacity: 0; }
-  35%  { opacity: 0; }
-  50%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.circle-1 {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: solid 1px rgba(127, 202, 252, 0.2);
-    position: absolute;
-    display: block;
-    top: 10px;
-    left: 10px;
-}
-
-.circle-2 {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: solid 1px rgba(127, 202, 252, 0.3);
-    position: absolute;
-    display: block;
-    top: 20px;
-    left: 20px;
-}
-
-.circle-3 {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: solid 1px rgba(127, 202, 252, 0.4);
-    position: absolute;
-    display: block;
-    top: 30px;
-    left: 30px;
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    70%  { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 
-.circle-4 {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: solid 1px rgba(127, 202, 252, 0.5);
-    position: absolute;
-    display: block;
-    top: 40px;
-    left: 40px;
+.circle {
+
+    &-1 {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: solid 1px rgba(127, 202, 252, 0.2);
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: 10px;
+    }
+
+    &-2 {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: solid 1px rgba(127, 202, 252, 0.3);
+        position: absolute;
+        display: block;
+        top: 20px;
+        left: 20px;
+    }
+
+    &-3 {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: solid 1px rgba(127, 202, 252, 0.4);
+        position: absolute;
+        display: block;
+        top: 30px;
+        left: 30px;
+    }
+
+    &-4 {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: solid 1px rgba(127, 202, 252, 0.5);
+        position: absolute;
+        display: block;
+        top: 40px;
+        left: 40px;
+    }
 }
 
-.line-1 {
-    z-index: 2;
-    width: 1px;
-    height: 200px;
-    position: absolute;
-    top: 0%;
-    background: rgba(127, 202, 252, 0.9);
-    transform: translate(100px,0px);
-}
+.line {
 
-.line-2 {
-    z-index: 2;
-    width: 1px;
-    height: 200px;
-    position: absolute;
-    top: 0%;
-    background: rgba(127, 202, 252, 0.9);
-    transform: translate(100px, 0px) rotate(90deg);
+    &-1 {
+        z-index: 2;
+        width: 1px;
+        height: 200px;
+        position: absolute;
+        top: 0%;
+        background: rgba(127, 202, 252, 0.9);
+        transform: translate(100px,0px);
+    }
+
+    &-2 {
+        z-index: 2;
+        width: 1px;
+        height: 200px;
+        position: absolute;
+        top: 0%;
+        background: rgba(127, 202, 252, 0.9);
+        transform: translate(100px, 0px) rotate(90deg);
+    }
 }
 
 .title {
@@ -247,39 +255,22 @@ body {
 }
 
 @keyframes pulse {
-    0% {
-        opacity: 0.9;
-    }
-
-    33% {
-        opacity: 0.7;
-    }
-
-    66% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 0.3;
-    }
+    0%   {opacity: 0.9;}
+    33%  {opacity: 0.7;}
+    66%  {opacity: 0.5;}
+    100% {opacity: 0.3;}
 }
 
 @keyframes title {
-    0% {
-        content: 'Analysing';
-    }
+    0%   {content: 'Analysing';}
+    33%  {content: 'Analysing.';}
+    66%  {content: 'Analysing..';}
+    100% {content: 'Analysing...';}
+}
 
-    33% {
-        content: 'Analysing.';
-    }
-
-    66% {
-        content: 'Analysing..';
-    }
-
-    100% {
-        content: 'Analysing...';
-    }
+@keyframes hideEnd {
+    50%  {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 </style>
